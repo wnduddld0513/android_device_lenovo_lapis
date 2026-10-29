@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
+# ADSP loader chain of the recovery ramdisk (init.recovery.qcom.rc insmod order).
+q6_pdr_dlkm.ko
+q6_notifier_dlkm.ko
+snd_event_dlkm.ko
+gpr_dlkm.ko
+spf_core_dlkm.ko
+adsp_loader_dlkm.ko

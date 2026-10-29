@@ -1,0 +1,3 @@
+# Dolby Vision display daemon (DVS)
+attribute dvs_aidl_client;
+attribute dvs_aidl_server;

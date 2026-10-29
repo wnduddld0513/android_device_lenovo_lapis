@@ -1,0 +1,32 @@
+# Imported from stock TB520FU vendor/build.prop
+# should change this by project
+vendor.display.lcd_density=340
+
+persist.sys.colormode_api=google
+persist.sys.colormode_modes=257:native;0:standard
+persist.sys.sf.color_temperature.warm=1.0,0.984378,0.9638465
+persist.sys.sf.color_temperature.cold=0.976217181,0.9782637656,1.0
+persist.sys.sf.color_temperature.standard=1.0,1.0,1.0
+ro.surface_flinger.primary_display_orientation=ORIENTATION_270
+debug.sf.ignore_hwc_physical_display_orientation=true
+ro.vendor.dolby.dax.version=DAX3_3.13.0.9_r1
+
+# Camera: the camx HAL applies the Lenovo 3A/ISP tuning only while the stock
+# property vendor.camera.packagename.zui is set; without it every app gets the
+# dark untuned path.
+vendor.camera.packagename.zui=com.zui.camera
+
+# Lenovo device identity from the stock vendor build.prop.
+ro.vendor.config.lgsi.cap_pen_info=monet_2
+ro.vendor.config.lgsi.pen.bluetooth_key.support=1
+ro.vendor.config.lgsi.pen.compat.project=1
+ro.vendor.config.lgsi.pen.event.name=NVTCapacitivePen
+ro.vendor.config.lgsi.pen_info=0x617F:0x17EF:Lenovo Tab Pen Plus;0x61A1:0x17EF:Lenovo Tab Pen Pro
+ro.vendor.config.lgsi.olympia_kb.name=Lenovo Wireless KB
+ro.vendor.config.lgsi.olympia_kb.name.row=Lenovo Multi-Device Wireless Keyboard
+ro.vendor.config.lgsi.device.type=pad
+ro.vendor.config.lgsi.hw.version=TB520FU
+ro.vendor.config.lgsi.market_name=Lenovo Yoga Tab Plus
+ro.vendor.config.lgsi.short_market_name=Lenovo Yoga Tab Plus
+ro.vendor.config.lgsi.project=lapis
+ro.vendor.config.lgsi.platform=qcom

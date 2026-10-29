@@ -1,0 +1,2 @@
+# Dolby Vision DVS daemon
+type dvs_aidl_service, hal_service_type, protected_service, service_manager_type;

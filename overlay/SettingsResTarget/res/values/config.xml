@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Regulatory labels: the stock e-label of TB520FU (system/etc/deviceinfo/e_label_wifi*.png) -->
+    <bool name="config_show_regulatory_info">true</bool>
+</resources>

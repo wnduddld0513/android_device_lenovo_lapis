@@ -1,0 +1,2 @@
+# Boot animation in landscape (the panel's natural orientation is portrait)
+ro.bootanim.set_orientation_logical_0=ORIENTATION_90

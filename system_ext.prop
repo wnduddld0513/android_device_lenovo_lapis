@@ -1,0 +1,2 @@
+# Default color mode Adaptive (see config_availableColorModes in the overlay)
+persist.sys.sf.native_mode=2

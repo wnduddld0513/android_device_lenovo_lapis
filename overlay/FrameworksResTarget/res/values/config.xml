@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<!-- Values from the stock LapisRowFrameworksOverlay unless noted -->
+<resources>
+    <!-- Brightness -->
+    <bool name="config_automatic_brightness_available">true</bool>
+
+    <integer-array name="config_autoBrightnessLevels">
+        <item>5</item>
+        <item>15</item>
+        <item>40</item>
+        <item>100</item>
+        <item>180</item>
+        <item>400</item>
+        <item>550</item>
+        <item>1000</item>
+        <item>1500</item>
+        <item>2000</item>
+        <item>2500</item>
+        <item>3000</item>
+        <item>4000</item>
+        <item>5000</item>
+    </integer-array>
+
+    <array name="config_autoBrightnessDisplayValuesNits">
+        <item>8</item>
+        <item>8</item>
+        <item>30</item>
+        <item>70</item>
+        <item>100</item>
+        <item>120</item>
+        <item>150</item>
+        <item>180</item>
+        <item>210</item>
+        <item>270</item>
+        <item>340</item>
+        <item>420</item>
+        <item>480</item>
+        <item>550</item>
+        <item>650</item>
+    </array>
+
+    <integer-array name="config_screenBrightnessBacklight">
+        <item>0</item>
+        <item>4</item>
+        <item>12</item>
+        <item>27</item>
+        <item>39</item>
+        <item>47</item>
+        <item>59</item>
+        <item>71</item>
+        <item>82</item>
+        <item>106</item>
+        <item>133</item>
+        <item>165</item>
+        <item>188</item>
+        <item>216</item>
+        <item>255</item>
+    </integer-array>
+
+    <array name="config_screenBrightnessNits">
+        <item>0</item>
+        <item>8</item>
+        <item>30</item>
+        <item>70</item>
+        <item>100</item>
+        <item>120</item>
+        <item>150</item>
+        <item>180</item>
+        <item>210</item>
+        <item>270</item>
+        <item>340</item>
+        <item>420</item>
+        <item>480</item>
+        <item>550</item>
+        <item>650</item>
+    </array>
+
+    <integer name="config_autoBrightnessBrighteningLightDebounce">2000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">2000</integer>
+    <item name="config_screenBrightnessDimFloat" format="float" type="dimen">0.15</item>
+    <item name="config_screenBrightnessDozeFloat" format="float" type="dimen">0.3</item>
+    <item name="config_screenBrightnessSettingDefaultFloat" format="float" type="dimen">0.2862</item>
+    <item name="config_screenBrightnessSettingMaximumFloat" format="float" type="dimen">1.0</item>
+    <item name="config_screenBrightnessSettingMinimumFloat" format="float" type="dimen">0.000977</item>
+    <integer name="config_screenBrightnessSettingDefault">73</integer>
+    <integer name="config_screenBrightnessSettingMinimum">1</integer>
+    <string name="config_displayLightSensorType" translatable="false">defaultlightsensor</string>
+
+    <!-- Night display -->
+    <string-array name="config_nightDisplayColorTemperatureCoefficients">
+        <item>0.0</item>
+        <item>0.0</item>
+        <item>1.0</item>
+        <item>-0.00000000962353339</item>
+        <item>0.000153045476</item>
+        <item>0.390782778</item>
+        <item>-0.0000000189359041</item>
+        <item>0.000302412211</item>
+        <item>-0.298650895</item>
+    </string-array>
+    <string-array name="config_nightDisplayColorTemperatureCoefficientsNative">
+        <item>0.0</item>
+        <item>0.0</item>
+        <item>1.0</item>
+        <item>-0.00000000962353339</item>
+        <item>0.000153045476</item>
+        <item>0.390782778</item>
+        <item>-0.0000000189359041</item>
+        <item>0.000302412211</item>
+        <item>-0.298650895</item>
+    </string-array>
+    <integer name="config_nightDisplayColorTemperatureDefault">5000</integer>
+    <integer name="config_nightDisplayColorTemperatureMax">6000</integer>
+    <integer name="config_nightDisplayColorTemperatureMin">4000</integer>
+
+    <!-- Audio -->
+    <integer name="config_safe_media_volume_index">11</integer>
+    <integer name="config_safe_media_volume_usb_mB">-1900</integer>
+
+    <!-- Refresh rate: up to 120 Hz like stock -->
+    <integer name="config_defaultPeakRefreshRate">120</integer>
+
+    <!-- Memory extension: let StorageManagerService schedule the zram
+         writeback job (the backing file comes from fstab.zram.N) -->
+    <bool name="config_zramWriteback">true</bool>
+
+    <!-- From the stock vendor FrameworksResTarget_Vendor overlay -->
+    <bool name="config_powerDecoupleAutoSuspendModeFromDisplay">true</bool>
+    <bool name="config_showNavigationBar">true</bool>
+    <bool name="config_useDevInputEventForAudioJack">true</bool>
+
+    <!-- Color modes (Settings > Display > Colors): Natural, Boosted, Adaptive.
+         Adaptive (persist.sys.sf.native_mode=2, system_ext.prop) is the default.
+         Without any color mode ColorDisplayService never activates white balance
+         (DisplayTransformManager.needsLinearColorMatrix() is false). -->
+    <integer-array name="config_availableColorModes">
+        <item>0</item>
+        <item>1</item>
+        <item>3</item>
+    </integer-array>
+
+    <!-- Display white balance ("Natural colors"): the tcs3408 RGB sensor reports the
+         ambient color temperature in Kelvin as values[0] of qti.sensor.rgb.
+         Ambient <3000K -> 5800K, 3000-4000 -> 6100, 4000-5000 -> 6500 (neutral),
+         5000-6000 -> 7100, 6000-7000 -> 7800, 7000-8000 -> 8500, >8000 -> 9500;
+         below 50 lux neutral, above 1000 lux 7500K. -->
+    <bool name="config_displayWhiteBalanceAvailable">true</bool>
+    <bool name="config_displayWhiteBalanceEnabledDefault">true</bool>
+    <string name="config_displayWhiteBalanceColorTemperatureSensorName" translatable="false">qti.sensor.rgb</string>
+    <integer name="config_displayWhiteBalanceColorTemperatureMin">5800</integer>
+    <integer name="config_displayWhiteBalanceColorTemperatureMax">9500</integer>
+    <array name="config_displayWhiteBalanceAmbientColorTemperatures">
+        <item>2800.0</item>
+        <item>3500.0</item>
+        <item>4500.0</item>
+        <item>5500.0</item>
+        <item>6500.0</item>
+        <item>7500.0</item>
+        <item>8500.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceDisplayColorTemperatures">
+        <item>5800.0</item>
+        <item>6100.0</item>
+        <item>6500.0</item>
+        <item>7100.0</item>
+        <item>7800.0</item>
+        <item>8500.0</item>
+        <item>9500.0</item>
+    </array>
+    <!-- The low and high light values below are display CCTs: the ambient CCT
+         is mapped to the display CCT first and then blended with these
+         (DisplayWhiteBalanceController.updateAmbientColorTemperature). -->
+    <array name="config_displayWhiteBalanceLowLightAmbientBrightnesses">
+        <item>40.0</item>
+        <item>50.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceLowLightAmbientBiases">
+        <item>0.0</item>
+        <item>1.0</item>
+    </array>
+    <item name="config_displayWhiteBalanceLowLightAmbientColorTemperature" format="float" type="dimen">6500.0</item>
+    <array name="config_displayWhiteBalanceHighLightAmbientBrightnesses">
+        <item>900.0</item>
+        <item>1000.0</item>
+    </array>
+    <array name="config_displayWhiteBalanceHighLightAmbientBiases">
+        <item>0.0</item>
+        <item>1.0</item>
+    </array>
+    <item name="config_displayWhiteBalanceHighLightAmbientColorTemperature" format="float" type="dimen">7500.0</item>
+
+    <!-- WiFi Display (Miracast) through the QTI session (WfdCommon) -->
+    <bool name="config_enableWifiDisplay">true</bool>
+</resources>

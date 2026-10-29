@@ -1,0 +1,8 @@
+vendor.lenovo.hardware.battery.IBattery/default         u:object_r:hal_lenovobattery_service:s0
+vendor.lenovo.hardware.display.IDisplay/default         u:object_r:hal_lenovodisplay_service:s0
+vendor.lenovo.hardware.keyboard.IKeyboard/default       u:object_r:hal_lenovokeyboard_service:s0
+vendor.lenovo.hardware.touchscreen.ITouchscreen/default u:object_r:hal_lenovotouchscreen_service:s0
+vendor.goodix.hardware.biometrics.fingerprint.cap.IGoodixFingerprintDaemon/default u:object_r:goodix_fingerprint_service:s0
+
+# Dolby Vision
+vendor.dolby.dvs.IDvs/default    u:object_r:dvs_aidl_service:s0

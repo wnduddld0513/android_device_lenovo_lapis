@@ -1,0 +1,23 @@
+# Dolby DAX3 (vendor.dolby.hardware.dms@2.0), HIDL, from the stock vendor policy.
+hal_attribute(dms)
+
+type hal_dms_hwservice, hwservice_manager_type;
+
+binder_call(hal_dms_client, hal_dms_server)
+binder_call(hal_dms_server, hal_dms_client)
+hal_attribute_hwservice(hal_dms, hal_dms_hwservice)
+
+type hal_dms_default, domain;
+hal_server_domain(hal_dms_default, hal_dms)
+type hal_dms_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_dms_default)
+hwbinder_use(hal_dms_default)
+
+# /data/vendor/dolby/dax_sqlite3.db
+allow hal_dms_default vendor_data_file:dir create_dir_perms;
+allow hal_dms_default vendor_data_file:file create_file_perms;
+
+# Clients: the audio HAL effects
+hal_client_domain(hal_audio_default, hal_dms)
+# Dolby audio decoders (vendor.dolby.media.c2-default-service-dax)
+hal_client_domain(mediacodec, hal_dms)

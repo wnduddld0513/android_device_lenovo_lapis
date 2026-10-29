@@ -1,0 +1,8 @@
+# Firmware written to the target slot by the ROM zip and OTAs (radio/).
+# From TB520FU_ROW_OPEN_USER_Q29300.0_A17_18.5.10.037_ST_260929, re-footered
+# with the AOSP testkey_rsa4096 (same salt and digest as stock).
+
+# pvmfw (protected VM firmware): the bootloader verifies it through vbmeta
+# once dm-verity is on; without its descriptor (BoardConfig) slot b was marked
+# unbootable and the first boot could crash.
+pvmfw.img;AB|05d67e53d26a883ca158ae0543bace77f0ea5a1d

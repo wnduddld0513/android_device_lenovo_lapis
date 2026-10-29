@@ -1,0 +1,60 @@
+//
+// Copyright (C) 2026 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.lenovo.zram.rc",
+    src: "init.lenovo.zram.rc",
+    sub_dir: "init",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.zram.0",
+    src: "fstab.zram.0",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.zram.2",
+    src: "fstab.zram.2",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.zram.4",
+    src: "fstab.zram.4",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.zram.6",
+    src: "fstab.zram.6",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.zram.8",
+    src: "fstab.zram.8",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.zram.12",
+    src: "fstab.zram.12",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.zram.16",
+    src: "fstab.zram.16",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.lapis.rc",
+    filename: "ueventd.rc",
+    src: "ueventd.lapis.rc",
+    device_specific: true,
+}
